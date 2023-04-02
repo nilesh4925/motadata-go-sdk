@@ -2,7 +2,7 @@ package motadatatypes
 
 import (
 	"encoding/json"
-	"motadata-go-sdk/sdkconstant"
+	"github.com/nilesh4925/motadata-go-sdk/sdkconstant"
 	"reflect"
 	"strconv"
 	"strings"

@@ -1,9 +1,9 @@
 package logger
 
 import (
+	. "github.com/nilesh4925/motadata-go-sdk/motadatatypes"
+	"github.com/nilesh4925/motadata-go-sdk/sdkconstant"
 	"github.com/pkg/errors"
-	. "motadata-go-sdk/motadatatypes"
-	"motadata-go-sdk/sdkconstant"
 	"os"
 )
 

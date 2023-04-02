@@ -1,11 +1,11 @@
 package sdkutil
 
 import (
+	"github.com/nilesh4925/motadata-go-sdk/logger"
+	. "github.com/nilesh4925/motadata-go-sdk/motadatatypes"
+	"github.com/nilesh4925/motadata-go-sdk/sdkconstant"
 	"gopkg.in/yaml.v3"
 	"io/ioutil"
-	"motadata-go-sdk/logger"
-	. "motadata-go-sdk/motadatatypes"
-	"motadata-go-sdk/sdkconstant"
 	"os"
 	"unicode"
 )
