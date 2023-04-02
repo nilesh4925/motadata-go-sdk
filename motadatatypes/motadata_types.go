@@ -722,6 +722,16 @@ func (context MotadataMap) GetStringSliceValue(key string) (result []interface{}
 	return
 }
 
+func (context MotadataMap) GetStringSlice(key string) (result []string) {
+
+	if context.Contains(key) {
+
+		return context[key].([]string)
+	}
+
+	return
+}
+
 func IsNotEmptyInterfaceSlice(values []interface{}) bool {
 
 	if values != nil && len(values) > 0 {

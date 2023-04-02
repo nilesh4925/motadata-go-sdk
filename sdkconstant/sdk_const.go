@@ -102,6 +102,8 @@ const (
 	ParamProcessRequestTimeout = "process-request-timeout"
 
 	ParamPingPacketSize = "ping-packet-size"
+
+	PortTypeTCP = "tcp"
 )
 
 var (
