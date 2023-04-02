@@ -650,6 +650,29 @@ func (context MotadataMap) GetUINT8Value(key string) (result MotadataUINT8) {
 	return
 }
 
+func (context MotadataMap) GetUINT8DataValue(key string) (result uint8) {
+
+	if context.Contains(key) {
+
+		value := context[key]
+
+		if reflect.TypeOf(value).Name() == "float64" {
+
+			result = uint8(value.(float64))
+		} else if reflect.TypeOf(context[key]).Name() == "int" {
+
+			result = uint8(context[key].(int))
+		} else if reflect.TypeOf(context[key]).Name() == "string" {
+
+			output, _ := strconv.ParseInt(strings.TrimSpace(context[key].(string)), 10, 8)
+
+			result = uint8(output)
+		}
+	}
+
+	return
+}
+
 func (value MotadataMap) IsNotEmpty() bool {
 
 	if value != nil && len(value) > 0 {
