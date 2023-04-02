@@ -143,3 +143,51 @@ func CreateYAMLFile(host MotadataString, fileName string, context MotadataMap) {
 	}
 
 }
+
+func GetPingRetryCount() MotadataUINT16 {
+
+	var retryCount MotadataUINT16 = 3
+
+	configDetails := ReadYAMLFile(sdkconstant.CurrentDir + sdkconstant.PathSeparator + sdkconstant.ConfigFolder + sdkconstant.PathSeparator + sdkconstant.SystemConfigFile)
+
+	configRetryCount := getConfigParam(configDetails, sdkconstant.ParamPingRetryCount)
+
+	if len(configRetryCount) > 0 {
+
+		retryCount = configRetryCount.ToUINT16()
+	}
+
+	return retryCount
+}
+
+func GetPingTimeout() MotadataUINT16 {
+
+	var timeout MotadataUINT16 = 10
+
+	configDetails := ReadYAMLFile(sdkconstant.CurrentDir + sdkconstant.PathSeparator + sdkconstant.ConfigFolder + sdkconstant.PathSeparator + sdkconstant.SystemConfigFile)
+
+	configTimeout := getConfigParam(configDetails, sdkconstant.ParamPingTimeout)
+
+	if len(configTimeout) > 0 {
+
+		timeout = configTimeout.ToUINT16()
+	}
+
+	return timeout
+}
+
+func GetPingPacketSize() MotadataUINT16 {
+
+	var packetSize MotadataUINT16 = 56
+
+	configDetails := ReadYAMLFile(sdkconstant.CurrentDir + sdkconstant.PathSeparator + sdkconstant.ConfigFolder + sdkconstant.PathSeparator + sdkconstant.SystemConfigFile)
+
+	configPacketSize := getConfigParam(configDetails, sdkconstant.ParamPingPacketSize)
+
+	if len(configPacketSize) > 0 {
+
+		packetSize = configPacketSize.ToUINT16()
+	}
+
+	return packetSize
+}
