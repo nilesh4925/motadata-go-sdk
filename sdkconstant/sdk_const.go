@@ -60,6 +60,28 @@ const (
 	ModuleSDK = "sdk"
 
 	ParamLogLevel = "log-level"
+
+	NCMContextDir = "ncm-context"
+
+	Host = "host"
+
+	Port = "port"
+
+	PluginContext = "plugin-context"
+
+	ResultSeparator = "_|@#|_"
+
+	Contexts = "work-context"
+
+	EventType = "event-type"
+
+	EventTypeDiscover = "discover"
+
+	EventTypeCollect = "collect"
+
+	YmlFileExtension = ".yml"
+
+	ErrorCodeTimedOut = "Timed out"
 )
 
 var (
