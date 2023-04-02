@@ -82,6 +82,26 @@ const (
 	YmlFileExtension = ".yml"
 
 	ErrorCodeTimedOut = "Timed out"
+
+	PluginPingCheckRequired = "ping-check-required"
+
+	PluginNMapPing = "nmap-ping"
+
+	ErrorCode = "error-code"
+
+	StatusCode = "Status"
+
+	StatusCodeUnreachable = 4
+
+	StatusCodeReachable = 1
+
+	ParamPingRetryCount = "max-ping-check-retry-count"
+
+	ParamPingTimeout = "max-ping-check-timeout"
+
+	ParamProcessRequestTimeout = "process-request-timeout"
+
+	ParamPingPacketSize = "ping-packet-size"
 )
 
 var (
